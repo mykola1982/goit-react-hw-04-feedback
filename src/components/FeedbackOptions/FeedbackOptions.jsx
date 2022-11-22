@@ -1,20 +1,21 @@
 import PropTypes from 'prop-types';
+import { ButtonList, ButtonItem, ButtonOption } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const normalizedOptions = Object.keys(options);
 
   return (
-    <ul>
+    <ButtonList>
       {normalizedOptions.map(option => {
         return (
-          <li key={option}>
-            <button type="button" onClick={() => onLeaveFeedback(option)}>
+          <ButtonItem key={option}>
+            <ButtonOption type="button" onClick={() => onLeaveFeedback(option)}>
               {option.toUpperCase()}
-            </button>
-          </li>
+            </ButtonOption>
+          </ButtonItem>
         );
       })}
-    </ul>
+    </ButtonList>
   );
 };
 
