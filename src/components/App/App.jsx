@@ -41,7 +41,7 @@ export class App extends Component {
       <Container>
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
-            options={this.state}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.leaveFeedback}
           />
         </Section>
