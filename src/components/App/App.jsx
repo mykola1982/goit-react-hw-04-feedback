@@ -15,13 +15,13 @@ export const App = () => {
   const leaveFeedback = option => {
     switch (option) {
       case 'good':
-        setGood(good + 1);
+        setGood(prevGood => prevGood + 1);
         break;
       case 'neutral':
-        setNeutral(neutral + 1);
+        setNeutral(prevNeutral => prevNeutral + 1);
         break;
       case 'bad':
-        setBad(bad + 1);
+        setBad(prevGood => prevGood + 1);
         break;
 
       default:
